@@ -20,9 +20,9 @@ RUN     apt-get update
 
 # Java
 RUN     cd /tmp && \
-	curl -b gpw_e24=http%3A%2F%2Fwww.oracle.com -b oraclelicense=accept-securebackup-cookie -O -L $JDK_LINK && \
-	tar -zxf /tmp/$JDK_PACKAGE -C /usr/local && \
-	ln -s /usr/local/$JDK_VERSION /usr/local/java
+        curl -b gpw_e24=http%3A%2F%2Fwww.oracle.com -b oraclelicense=accept-securebackup-cookie -O -L $JDK_LINK && \
+        tar -zxf /tmp/$JDK_PACKAGE -C /usr/local && \
+        ln -s /usr/local/$JDK_VERSION /usr/local/java
 
 ENV     JAVA_HOME /usr/local/java
 ENV     JRE_HOME /usr/local/java/jre
@@ -34,7 +34,7 @@ RUN     rm -rf /tmp/* /var/tmp/*
 RUN     rm -rf /var/lib/apt/lists/*
 
 # Set environment variables.
-ENV 	HOME /root
+ENV     HOME /root
 
 # Define working directory.
 WORKDIR /root
