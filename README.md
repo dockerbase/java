@@ -21,5 +21,5 @@ This repository contains **Dockerbase** of [Java](http://www.oracle.com/technetw
     docker run -it --rm dockerbase/java
 
 ### Information
-[Components & Versions](COMPONENTS)
+[Components & Versions](https://github.com/dockerbase/java/blob/master/COMPONENTS)
 
