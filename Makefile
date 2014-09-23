@@ -15,7 +15,14 @@ run:
 	docker run -it --rm $(NAME):$(VERSION) 
 
 version:
-	docker run -it --rm $(NAME):$(VERSION) sh -c 'java -version ; git --version'
+	docker run -it --rm $(NAME):$(VERSION) sh -c " lsb_release -d ; git --version ; " | tee COMPONENTS
+	docker run -it --rm $(NAME):$(VERSION) sh -c 'java -version ; git --version' | tee -a COMPONENTS
+	dos2unix COMPONENTS
+	sed -i -e 's/^/    /' COMPONENTS
+	sed -i -e '/^### Components & Versions/q' README.md
+	echo >> README.md
+	cat COMPONENTS >> README.md
+	rm COMPONENTS
 
 tag_latest:
 	docker tag $(NAME):$(VERSION) $(NAME):latest

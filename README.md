@@ -20,6 +20,11 @@ This repository contains **Dockerbase** of [Java](http://www.oracle.com/technetw
 
     docker run -it --rm dockerbase/java
 
-### Information
-[Components & Versions](https://github.com/dockerbase/java/blob/master/COMPONENTS)
+### Components & Versions
 
+    Description:	Ubuntu 14.04.1 LTS
+    git version 1.9.1
+    java version "1.8.0_20"
+    Java(TM) SE Runtime Environment (build 1.8.0_20-b26)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.20-b23, mixed mode)
+    git version 1.9.1
